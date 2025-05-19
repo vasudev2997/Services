@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="url"] {
+            padding: 8px;
+            width: 300px;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            font-size: 1rem;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>URL Shortener Service</h2>
+    <form action="http://127.0.0.1:5000/" method="POST">
+        <label for="long_url" style="display: block; margin-bottom: 10px;">Enter a long URL:</label>
+        <input 
+            type="url" 
+            id="long_url" 
+            name="long_url" 
+            placeholder="https://example.com" 
+            pattern="https://.*" 
+            required 
+        >
+        <input type="submit" value="Shorten URL">
+    </form>
+</body>
+</html>
